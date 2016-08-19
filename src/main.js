@@ -21,7 +21,7 @@ app.on("window-all-closed", () => {
 // initialization and ready for creating browser windows.
 app.on("ready", () => {
     // Create the browser window.
-    mainWindow = new BrowserWindow({width: 320, height: 600});
+    mainWindow = new BrowserWindow({width: 320, height: 620, resizable: false, icon: `${__dirname}/Calc.ico`});
 
     // and load the index.html of the app.
     mainWindow.loadUrl(`file://${__dirname}/index.html`);

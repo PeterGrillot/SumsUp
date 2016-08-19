@@ -17,6 +17,7 @@ gulp.task("release", callback => {
         packager({
             dir: ".tmp",
             name: info.name,
+            icon: `${__dirname}/Calc.ico`,
             platform: "darwin",
             arch: "ia32,x64",
             version: electronInfo.version,

@@ -1,13 +1,4 @@
-// "use strict";
-
-// import React from "react";
-// import ReactDOM from "react-dom";
-// import ReactApp from "./ReactApp.js";
-
-// ReactDOM.render(
-//     React.createElement(ReactApp),
-//     document.getElementById("root")
-// );
+"use strict";
 (function() {
 	// Vars
 	const inputDisplay = document.getElementById('js-inputDisplay');
