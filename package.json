@@ -1,5 +1,5 @@
 {
-  "name": "electron-boilerplate",
+  "name": "Calc",
   "version": "1.0.0",
   "description": "A electron app template with React, babel, sass, gulp and bower",
   "main": "main.js",
@@ -14,14 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/superbrothers/electron-boilerplate.git"
+    "url": "git://github.com/petergrillot/calc.git"
   },
   "author": "Kazuki Suda <kazuki.suda@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/superbrothers/electron-boilerplate/issues"
-  },
-  "homepage": "https://github.com/superbrothers/electron-boilerplate#readme",
   "dependencies": {
     "react": "^0.14.0-rc1",
     "react-dom": "^0.14.0-rc1"
