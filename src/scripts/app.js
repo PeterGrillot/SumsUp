@@ -16,26 +16,26 @@
 	//Functions
 	const evaluate = function(fn) {
 		return new Function('return ' + fn)();
-	}
+	};
 	const display = function(num) {
 		inputDisplay.value = inputDisplay.value + num;
-	}
+	};
 	const remember = function() {
 		mem = outputDisplay.innerHTML;
-	}
+	};
 	const recall = function() {
 		inputDisplay.value = inputDisplay.value + mem;
-	}
+	};
 	const clear = function(){
 		inputDisplay.value = '';
-	}
+	};
 	const allClear = function(){
 		inputDisplay.value = '';
 		savedDisplay.innerHTML = '';
-	}
+	};
 	const backspace = function() {
 		inputDisplay.value = inputDisplay.value.slice(0, -1);
-	}
+	};
 	const execute = function() {
 		if (inputDisplay.value !== '') {
 			if (inputDisplay.value[0] === '*' ||
@@ -50,7 +50,7 @@
 			inputDisplay.value = '';
 		}
 
-	}
+	};
 
 	for (let i = 0; i < buttonNum.length; i++) {
 		buttonNum[i].addEventListener('click', function(event) {
@@ -79,9 +79,6 @@
 	});
 	var turnOnKeyboard = function(){
 		document.addEventListener("keypress", function(evt){
-			console.log(evt);
-			console.log();
-			// console.log(e.key)
 			evt = evt || window.event;
 			if (
 				(evt.which >= 46 && evt.which <= 57) ||
@@ -100,20 +97,6 @@
 				backspace();
 			}
 		});
-	}
+	};
 	turnOnKeyboard();
-	inputDisplay.addEventListener('blur', function(){
-		turnOnKeyboard();
-	})
-	inputDisplay.addEventListener('focus', function(){
-		document.onkeypress = function(e) {
-			if (e.which == 13) {
-				e.preventDefault;
-				execute();
-			}else{
-				e.preventDefault;
-			}
-			
-		}
-	})
 })();
