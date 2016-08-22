@@ -27,9 +27,9 @@ app.on("ready", () => {
     mainWindow.loadUrl(`file://${__dirname}/index.html`);
 
     // Open the devtools.
-    if (process.env.NODE_ENV !== "production") {
-        mainWindow.openDevTools();
-    }
+    // if (process.env.NODE_ENV !== "production") {
+    //     // mainWindow.openDevTools();
+    // }
 
     // Emitted when the window is closed.
     mainWindow.on("closed", () => {
