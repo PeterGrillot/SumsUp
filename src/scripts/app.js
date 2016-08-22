@@ -42,7 +42,7 @@
 				inputDisplay.value[0] === '/' ||
 				inputDisplay.value[0] === '+' ||
 				inputDisplay.value[0] === '-') {
-				outputDisplay.innerHTML = evaluate(outputDisplay.innerHTML + inputDisplay.value)
+				outputDisplay.innerHTML = evaluate(outputDisplay.innerHTML + inputDisplay.value);
 			} else {
 				outputDisplay.innerHTML = evaluate(inputDisplay.value);
 			}
@@ -54,53 +54,52 @@
 
 	for (let i = 0; i < buttonNum.length; i++) {
 		buttonNum[i].addEventListener('click', function(event) {
-			display(event.toElement.dataset.num)
+			display(event.toElement.dataset.num);
 		});
 	}
 	for (let i = 0; i < buttonOperant.length; i++) {
 		buttonOperant[i].addEventListener('click', function(event) {
-			display(event.toElement.dataset.operant)
+			display(event.toElement.dataset.operant);
 		});
 	}
 	buttonExecute.addEventListener('click', function() {
-		execute()
+		execute();
 	});
 	buttonRemember.addEventListener('click', function() {
-		remember()
+		remember();
 	});
 	buttonRecall.addEventListener('click', function() {
-		recall()
+		recall();
 	});
 	buttonClear.addEventListener('click', function() {
-		clear()
+		clear();
 	});
 	buttonAllClear.addEventListener('click', function() {
-		allClear()
+		allClear();
 	});
 	var turnOnKeyboard = function(){
-		document.addEventListener("keydown", function(evt){
-			console.log(evt)
-		});
-		document.onkeypress = function(e) {
+		document.addEventListener("keypress", function(evt){
+			console.log(evt);
+			console.log();
 			// console.log(e.key)
-			e = e || window.event;
+			evt = evt || window.event;
 			if (
-				(e.which >= 46 && e.which <= 57) ||
-				(e.which >= 96 && e.which <= 105) ||
-				e.which == 43 ||
-				e.which == 45 ||
-				e.which == 42 ||
-				e.which == 61) {
-				display(e.key);
+				(evt.which >= 46 && evt.which <= 57) ||
+				(evt.which >= 96 && evt.which <= 105) ||
+				evt.which == 43 ||
+				evt.which == 45 ||
+				evt.which == 42 ||
+				evt.which == 61) {
+				display(String.fromCharCode(evt.which));
 			}
-			if (e.which == 13) {
-				e.preventDefault;
+			if (evt.which == 13) {
+				evt.preventDefault;
 				execute();
 			}
-			if (e.which == 44){
+			if (evt.which == 44){
 				backspace();
 			}
-		}
+		});
 	}
 	turnOnKeyboard();
 	inputDisplay.addEventListener('blur', function(){

@@ -22,9 +22,9 @@ app.on("window-all-closed", () => {
 app.on("ready", () => {
     // Create the browser window.
     if (process.env.NODE_ENV !== "production") {
-        mainWindow = new BrowserWindow({width: 320, height: 620, icon: `${__dirname}/Calc`});
+        mainWindow = new BrowserWindow({title: 'Calc', width: 320, height: 620, icon: `${__dirname}/Calc`});
     } else {
-        mainWindow = new BrowserWindow({width: 320, height: 620, resizable: false, icon: `${__dirname}/Calc`});
+        mainWindow = new BrowserWindow({title: 'Calc', width: 320, height: 620, resizable: false, icon: `${__dirname}/Calc`});
     }
     
 
