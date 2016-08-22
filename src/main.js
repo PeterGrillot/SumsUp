@@ -21,15 +21,20 @@ app.on("window-all-closed", () => {
 // initialization and ready for creating browser windows.
 app.on("ready", () => {
     // Create the browser window.
-    mainWindow = new BrowserWindow({width: 320, height: 620, resizable: false, icon: `${__dirname}/Calc`});
+    if (process.env.NODE_ENV !== "production") {
+        mainWindow = new BrowserWindow({width: 320, height: 620, icon: `${__dirname}/Calc`});
+    } else {
+        mainWindow = new BrowserWindow({width: 320, height: 620, resizable: false, icon: `${__dirname}/Calc`});
+    }
+    
 
     // and load the index.html of the app.
     mainWindow.loadUrl(`file://${__dirname}/index.html`);
 
     // Open the devtools.
-    // if (process.env.NODE_ENV !== "production") {
-    //     // mainWindow.openDevTools();
-    // }
+    if (process.env.NODE_ENV !== "production") {
+        mainWindow.openDevTools();
+    }
 
     // Emitted when the window is closed.
     mainWindow.on("closed", () => {
