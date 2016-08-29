@@ -77,6 +77,9 @@
 	buttonAllClear.addEventListener('click', function() {
 		allClear();
 	});
+	savedDisplay.addEventListener('click',function(evt){
+		this.select();
+	});
 	var turnOnKeyboard = function(){
 		document.addEventListener("keypress", function(evt){
 			evt = evt || window.event;

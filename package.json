@@ -1,7 +1,7 @@
 {
-  "name": "Calc",
+  "name": "SumsUp",
   "version": "1.0.0",
-  "description": "A electron app template with React, babel, sass, gulp and bower",
+  "description": "A Calculator built with Electron",
   "main": "main.js",
   "scripts": {
     "gulp": "gulp",

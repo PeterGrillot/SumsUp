@@ -12,9 +12,9 @@ let mainWindow = null;
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
+    // if (process.platform !== 'darwin') {
         app.quit();
-    }
+    // }
 });
 
 // This method will be called when Electron has done everything
@@ -23,14 +23,13 @@ app.on('ready', () => {
     // Create the browser window.
     if (process.env.NODE_ENV !== 'production') {
         mainWindow = new BrowserWindow({
-            title: 'Calc',
+            title: 'Sums Up',
             width: 320,
-            height: 620,
-            resizable: false
+            height: 620
         });
     } else {
         mainWindow = new BrowserWindow({
-            title: 'Calc',
+            title: 'Sums Up',
             width: 320,
             height: 620,
             resizable: false
@@ -43,7 +42,7 @@ app.on('ready', () => {
 
     // Open the devtools.
     if (process.env.NODE_ENV !== 'production') {
-        // mainWindow.openDevTools();
+        mainWindow.openDevTools();
     }
 
     // Emitted when the window is closed.
