@@ -4,6 +4,9 @@ import app from 'app';
 import BrowserWindow from 'browser-window';
 // Report crashes to our server.
 import crashReporter from 'crash-reporter';
+// Module to Set up Menu
+import Menu from 'menu';
+
 crashReporter.start();
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -52,4 +55,26 @@ app.on('ready', () => {
         // when you should delete the corresponding element.
         mainWindow = null;
     });
+
+    // Create the Application's main menu
+    var template = [{
+        label: "Application",
+        submenu: [
+            { label: "About Application", selector: "orderFrontStandardAboutPanel:" },
+            { type: "separator" },
+            { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
+        ]}, {
+        label: "Edit",
+        submenu: [
+            { label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
+            { label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:" },
+            { type: "separator" },
+            { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
+            { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
+            { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
+            { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" }
+        ]}
+    ];
+
+    Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 });
