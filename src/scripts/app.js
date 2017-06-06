@@ -81,11 +81,12 @@
 		this.select();
 	});
 	var turnOnKeyboard = function(){
-		document.addEventListener("keypress", function(evt){
+		document.addEventListener("keydown", function(evt){
 			evt = evt || window.event;
 			if (
 				(evt.which >= 46 && evt.which <= 57) ||
 				(evt.which >= 96 && evt.which <= 105) ||
+				(evt.which >= 187 && evt.which <= 189) ||
 				evt.which == 43 ||
 				evt.which == 45 ||
 				evt.which == 42 ||
@@ -96,7 +97,7 @@
 				evt.preventDefault;
 				execute();
 			}
-			if (evt.which == 44){
+			if (evt.which == 44 || evt.which == 8 ){
 				backspace();
 			}
 		});
