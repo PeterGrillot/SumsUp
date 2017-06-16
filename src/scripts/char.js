@@ -1,0 +1,91 @@
+function getChar(isShiftKey, characterCode) {
+  var characterMapShift = [];
+  characterMapShift[48] = ")";
+  characterMapShift[49] = "!";
+  characterMapShift[53] = "%";
+  characterMapShift[56] = "*";
+  characterMapShift[57] = "(";
+  characterMapShift[61] = "+";
+  characterMapShift[96] = "0";
+  characterMapShift[97] = "1";
+  characterMapShift[98] = "2";
+  characterMapShift[99] = "3";
+  characterMapShift[100] = "4";
+  characterMapShift[101] = "5";
+  characterMapShift[102] = "6";
+  characterMapShift[103] = "7";
+  characterMapShift[104] = "8";
+  characterMapShift[105] = "9";
+  characterMapShift[106] = "*";
+  characterMapShift[107] = "+";
+  characterMapShift[109] = "_";
+  characterMapShift[107] = "+";
+  characterMapShift[111] = "/";
+  characterMapShift[112] = "";
+  characterMapShift[113] = "";
+  characterMapShift[114] = "";
+  characterMapShift[115] = "";
+  characterMapShift[116] = "";
+  characterMapShift[117] = "";
+  characterMapShift[118] = "";
+  characterMapShift[119] = "";
+  characterMapShift[120] = "";
+  characterMapShift[121] = "";
+  characterMapShift[122] = "";
+  characterMapShift[123] = "";
+  characterMapShift[144] = "";
+  characterMapShift[145] = "";
+  characterMapShift[186] = ":";
+  characterMapShift[187] = "+";
+  characterMapShift[188] = "<";
+  characterMapShift[189] = "_";
+  characterMapShift[190] = ">";
+  characterMapShift[191] = "?";
+  characterMapShift[192] = "~";
+  characterMapShift[219] = "{";
+  characterMapShift[220] = "|";
+  characterMapShift[221] = "}";
+  characterMapShift[222] = "\"";
+  var characterMap = [];
+  characterMap[8] = "";
+  characterMap[48] = "0";
+  characterMap[49] = "1";
+  characterMap[50] = "2";
+  characterMap[51] = "3";
+  characterMap[52] = "4";
+  characterMap[53] = "5";
+  characterMap[54] = "6";
+  characterMap[55] = "7";
+  characterMap[56] = "8";
+  characterMap[57] = "9";
+  characterMap[61] = "=";
+  characterMap[96] = "0";
+  characterMap[97] = "1";
+  characterMap[98] = "2";
+  characterMap[99] = "3";
+  characterMap[100] = "4";
+  characterMap[101] = "5";
+  characterMap[102] = "6";
+  characterMap[103] = "7";
+  characterMap[104] = "8";
+  characterMap[105] = "9";
+  characterMap[106] = "*";
+  characterMap[107] = "+";
+  characterMap[109] = "_";
+  characterMap[107] = "+";
+  characterMap[111] = "/";
+  characterMap[187] = "=";
+  characterMap[189] = "-";
+  characterMap[190] = ".";
+  characterMap[191] = "/";
+  if (typeof isShiftKey != "boolean" || typeof characterCode != "number") {
+    return false;
+  }
+
+  if (isShiftKey) {
+    return characterMapShift[characterCode];
+  } else {
+    return characterMap[characterCode];
+  }
+}
+module.exports = getChar;

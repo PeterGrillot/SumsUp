@@ -17,9 +17,10 @@ gulp.task("release", callback => {
         packager({
             dir: ".tmp",
             name: info.name,
-            icon: `${__dirname}/Calc.ico`,
+            icon: "./src/calc.icns",
             platform: "darwin",
             arch: "ia32,x64",
+            overwrite: true,
             version: electronInfo.version,
             out: "release",
             cache: ".cache"

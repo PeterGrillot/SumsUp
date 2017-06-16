@@ -1,7 +1,7 @@
 {
-  "name": "electron-boilerplate",
-  "version": "1.0.0",
-  "description": "A electron app template with React, babel, sass, gulp and bower",
+  "name": "SumsUp",
+  "version": "1.0.1",
+  "description": "A Calculator built with Electron",
   "main": "main.js",
   "scripts": {
     "gulp": "gulp",
@@ -14,14 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/superbrothers/electron-boilerplate.git"
+    "url": "git://github.com/petergrillot/calc.git"
   },
   "author": "Kazuki Suda <kazuki.suda@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/superbrothers/electron-boilerplate/issues"
-  },
-  "homepage": "https://github.com/superbrothers/electron-boilerplate#readme",
   "dependencies": {
     "react": "^0.14.0-rc1",
     "react-dom": "^0.14.0-rc1"
