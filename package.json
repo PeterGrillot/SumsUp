@@ -1,6 +1,6 @@
 {
   "name": "SumsUp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Calculator built with Electron",
   "main": "main.js",
   "scripts": {
